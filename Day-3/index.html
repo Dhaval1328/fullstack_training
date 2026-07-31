@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>This Is Day-3 Of Training</title>
+  </head>
+  <body id="bdy">
+    <h1>Theme Toggle Project</h1>
+    <p>JavaScript DOM Dynamic Styling</p>
+    <button id="b1" onclick="Changecolor()">Change Theme</button>
+
+    <script>
+      const body = document.getElementById("bdy");
+      const btn = document.getElementById("btn");
+
+      function Changecolor() {
+        body.style.backgroundColor = "black";
+        body.style.color = "white";
+      }
+      btn.addEventListener("click", Changecolor);
+    </script>
+  </body>
+</html>
