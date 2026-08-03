@@ -4,6 +4,6 @@ let timer = setInterval(() => {
     console.log(count++);
 
     if (count === 11) {
-        clearInterval(timer);
+        break;
     }
 }, 1000);
