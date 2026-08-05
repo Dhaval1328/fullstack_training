@@ -28,19 +28,26 @@
     
 
 async function getData() {
-    try{
-        //Fetch data from the server
-        const response = await fetch("https://jsonplaceholder.typicode.com/todos")
+    try {
+        // Fetch data from the server
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
-        //Convert response into JSON
+        // Convert response into JSON
         const data = await response.json();
 
-        //Print the recived data
-        console.log(data);
-    }catch(error){
-        //Handle any error that occurs
+        console.table(
+            data.map(user => ({
+                ID: user.id,
+                Name: user.name,
+                Email: user.email,
+                City: user.address.city
+            }))
+        );
+
+    } catch (error) {
+        // Handle any error
         console.log("Error:", error);
     }
 }
 
-getData()
+getData();
