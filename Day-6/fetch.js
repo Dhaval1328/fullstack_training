@@ -24,3 +24,5 @@ fetch("https://jsonplaceholder.typicode.com/users")
         // Handle any error that occurs during the request.
         console.log("Error:", error);
     });
+
+    
