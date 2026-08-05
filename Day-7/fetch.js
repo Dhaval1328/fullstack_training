@@ -27,6 +27,32 @@
 
     
 
+// async function getData() {
+//     try {
+//         // Fetch data from the server
+//         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+//         // Convert response into JSON
+//         const data = await response.json();
+
+//         console.table(
+//             data.map(user => ({
+//                 ID: user.id,
+//                 Name: user.name,
+//                 Email: user.email,
+//                 City: user.address.city
+//             }))
+//         );
+
+//     } catch (error) {
+//         // Handle any error
+//         console.log("Error:", error);
+//     }
+// }
+
+// getData();
+
+
 async function getData() {
     try {
         // Fetch data from the server
@@ -35,17 +61,15 @@ async function getData() {
         // Convert response into JSON
         const data = await response.json();
 
-        console.table(
-            data.map(user => ({
-                ID: user.id,
-                Name: user.name,
-                Email: user.email,
-                City: user.address.city
-            }))
-        );
+        for (let i = 0; i < data.length; i++) {
+            console.log("ID:", data[i].id);
+            console.log("Name:", data[i].name);
+            console.log("Email:", data[i].email);
+            console.log("City:", data[i].address.city);
+            console.log("------------------------");
+        }
 
     } catch (error) {
-        // Handle any error
         console.log("Error:", error);
     }
 }
