@@ -1,8 +1,7 @@
 import React from "react";
 
 function App() {
-  const h1 = React.createRoot("h1", null, "This Is First Component");
-  return <div>{h1}</div>;
+  <h1>This Is my First Component</h1>;
 }
 
 export default App;
