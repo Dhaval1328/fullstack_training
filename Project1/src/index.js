@@ -1,4 +1,4 @@
-let arr = [34, 12, 54, 35, 67];
+// let arr = [34, 12, 54, 35, 67];
 
 // let sum = 0;
 
@@ -10,8 +10,26 @@ let arr = [34, 12, 54, 35, 67];
 
 // console.log("Average:", average);
 
-arr.reduce((sum ,value ,index ,  array) =>{
-    return sum += value
-}, 0)
+// arr.reduce((sum ,value ,index ,  array) =>{
+//     return sum += value
+// }, 0)
 
-console.log(sum);
+// console.log(sum);
+
+let arr = [34,12,54];
+
+let [a,b,c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+
+let student = {
+    name='Dhavl',
+    age:20
+}
+
+let {name,age}= student
+console.log(name)
+console.log(age)
