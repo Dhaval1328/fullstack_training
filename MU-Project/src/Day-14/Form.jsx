@@ -18,7 +18,12 @@ function Form() {
     <>
       <form onSubmit={handleSubmit}>
         <label htmlFor="">Enter Name : </label>
-        <input type="text" value={name} onChange={hendalName} />
+        <input
+          type="text"
+          value={name}
+          onChange={hendalName}
+          placeholder="Enter Your Name"
+        />
         <h1>{name}</h1>
         <button type="Submit">Submit</button>
       </form>
