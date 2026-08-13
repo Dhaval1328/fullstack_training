@@ -23,6 +23,13 @@ function Cart() {
   return (
     <>
       <h1>Cart Page</h1>
+
+      <h2>Laptop</h2>
+      <p>Price: 50000</p>
+      <p>Quantity</p>
+      <button>-</button>
+      <button>+</button>
+      <button>Remove</button>
     </>
   );
 }
