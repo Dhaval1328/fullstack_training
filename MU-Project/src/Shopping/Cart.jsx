@@ -24,12 +24,21 @@ function Cart() {
     <>
       <h1>Cart Page</h1>
 
-      <h2>Laptop</h2>
-      <p>Price: 50000</p>
-      <p>Quantity</p>
-      <button>-</button>
-      <button>+</button>
-      <button>Remove</button>
+      {cart.map((data) => {
+        return (
+          <li key={data.id}>
+            <h2>{data.name}</h2>
+
+            <p>Price: ₹{data.price}</p>
+
+            <p>Quantity: {data.quantity}</p>
+
+            <button>-</button>
+            <button>+</button>
+            <button>Remove</button>
+          </li>
+        );
+      })}
     </>
   );
 }
