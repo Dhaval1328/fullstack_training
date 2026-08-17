@@ -24,7 +24,6 @@ const initialCart = [
 export default function Cart() {
   const [cart, setCart] = useState(initialCart);
 
-  // Increase quantity
   const increaseQuantity = (id) => {
     setCart(
       cart.map((item) =>
@@ -33,7 +32,6 @@ export default function Cart() {
     );
   };
 
-  // Decrease quantity
   const decreaseQuantity = (id) => {
     setCart(
       cart.map((item) =>
@@ -44,12 +42,10 @@ export default function Cart() {
     );
   };
 
-  // Remove item
   const removeItem = (id) => {
     setCart(cart.filter((item) => item.id !== id));
   };
 
-  // Calculate total
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
   return (

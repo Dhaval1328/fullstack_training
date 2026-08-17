@@ -16,9 +16,9 @@ function App() {
 
       {/* <Loginform /> */}
       {/* <Review /> */}
-      {/* <Navbar /> */}
+      <Navbar />
       {/* <ArrayUpdate /> */}
-      <Cart />
+      {/* <Cart /> */}
     </>
   );
 }

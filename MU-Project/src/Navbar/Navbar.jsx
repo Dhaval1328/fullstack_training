@@ -3,48 +3,37 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">MyWebsite</div>
-      <ul class="links">
+      <div className="logo">
+        <img src="/ElectroMart.jpg" alt="ElectroMart Logo" />
+      </div>
+
+      <ul className="links">
         <li>
-          <a href="index.html">home</a>
+          <a href="/">Home</a>
         </li>
+
         <li>
-          <a href="about.html">about</a>
+          <a href="/about">About</a>
         </li>
+
         <li>
-          <a href="projects.html">projects</a>
+          <a href="/projects">Projects</a>
         </li>
+
         <li>
-          <a href="contact.html">contact</a>
-        </li>
-      </ul>
-      <ul class="social-icons">
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-behance"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-linkedin"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.twitter.com">
-            <i class="fab fa-sketch"></i>
-          </a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
+
+      <div className="auth-buttons">
+        <a href="/login" className="login-btn">
+          Login
+        </a>
+
+        <a href="/register" className="register-btn">
+          Register
+        </a>
+      </div>
     </nav>
   );
 }
