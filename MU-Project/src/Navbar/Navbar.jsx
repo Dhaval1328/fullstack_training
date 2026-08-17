@@ -1,38 +1,41 @@
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="logo">
-        <img src="/ElectroMart.jpg" alt="ElectroMart Logo" />
+        <Link to="/">
+          <img src="/ElectroMart.jpg" alt="ElectroMart Logo" />
+        </Link>
       </div>
 
       <ul className="links">
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
 
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
 
         <li>
-          <a href="/projects">Projects</a>
+          <Link to="/projects">Projects</Link>
         </li>
 
         <li>
-          <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
 
       <div className="auth-buttons">
-        <a href="/login" className="login-btn">
+        <Link to="/login" className="login-btn">
           Login
-        </a>
+        </Link>
 
-        <a href="/register" className="register-btn">
+        <Link to="/register" className="register-btn">
           Register
-        </a>
+        </Link>
       </div>
     </nav>
   );
