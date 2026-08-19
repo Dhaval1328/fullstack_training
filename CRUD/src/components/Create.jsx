@@ -62,7 +62,8 @@ function Create() {
         />
 
         <button type="submit">Submit</button>
-
+        <br />
+        <br />
         <button type="button" onClick={() => navigate("/read")}>
           View Data
         </button>
