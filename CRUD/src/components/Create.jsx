@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 import "../Style/Form.css";
 
 function Create() {
@@ -21,9 +22,19 @@ function Create() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    console.log("Name is:", name);
-    console.log("Email is:", email);
-    console.log("Password is:", password);
+    axios
+      .post("https://6a8512e39c451dc67a633df5.mockapi.io/Crud", {
+        e_name: name,
+        e_email: email,
+        e_password: password,
+      })
+      .then((response) => {
+        console.log(response.data);
+        alert("Data Added Successfully");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
