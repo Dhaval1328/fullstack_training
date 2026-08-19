@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 import "../Style/Form.css";
 
 function Create() {
@@ -7,17 +8,7 @@ function Create() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleName = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleEmail = (e) => {
-    setEmail(e.target.value);
-  };
-
-  const handlePassword = (e) => {
-    setPassword(e.target.value);
-  };
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -31,6 +22,10 @@ function Create() {
       .then((response) => {
         console.log(response.data);
         alert("Data Added Successfully");
+
+        setName("");
+        setEmail("");
+        setPassword("");
       })
       .catch((error) => {
         console.log(error);
@@ -47,32 +42,30 @@ function Create() {
           type="text"
           placeholder="Enter your name"
           value={name}
-          onChange={handleName}
+          onChange={(e) => setName(e.target.value)}
         />
-
-        <br />
 
         <label>Enter Your Email:</label>
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
-          onChange={handleEmail}
+          onChange={(e) => setEmail(e.target.value)}
         />
-
-        <br />
 
         <label>Enter Your Password:</label>
         <input
           type="password"
           placeholder="Enter your password"
           value={password}
-          onChange={handlePassword}
+          onChange={(e) => setPassword(e.target.value)}
         />
 
-        <br />
-
         <button type="submit">Submit</button>
+
+        <button type="button" onClick={() => navigate("/read")}>
+          View Data
+        </button>
       </form>
     </>
   );
