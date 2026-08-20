@@ -1,8 +1,11 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Read() {
   const [data, setData] = useState([]);
+
+  const navigate = useNavigate();
 
   function getData() {
     axios
@@ -30,6 +33,11 @@ function Read() {
         .delete(`https://6a8512e39c451dc67a633df5.mockapi.io/Crud/${id}`)
         .then(() => {
           alert("Data Deleted Successfully!");
+
+          setData(data.filter((item) => item.id !== id));
+        })
+        .catch((error) => {
+          console.log(error);
         });
     }
   };
@@ -59,7 +67,9 @@ function Read() {
               <td>{item.e_password}</td>
 
               <td>
-                <button>Edit</button>
+                <button onClick={() => navigate(`/update/${item.id}`)}>
+                  Edit
+                </button>
               </td>
 
               <td>
