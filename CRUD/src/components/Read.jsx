@@ -20,6 +20,20 @@ function Read() {
     getData();
   }, []);
 
+  const deleteData = (id) => {
+    const confirmDelete = window.confirm(
+      "Are You Sure You Want To Delete This Data!",
+    );
+
+    if (confirmDelete) {
+      axios
+        .delete(`https://6a8512e39c451dc67a633df5.mockapi.io/Crud/${id}`)
+        .then(() => {
+          alert("Data Deleted Successfully!");
+        });
+    }
+  };
+
   return (
     <div>
       <h2>User Data</h2>
@@ -49,7 +63,7 @@ function Read() {
               </td>
 
               <td>
-                <button>Delete</button>
+                <button onClick={() => deleteData(item.id)}>Delete</button>
               </td>
             </tr>
           ))}
