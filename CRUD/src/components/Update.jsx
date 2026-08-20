@@ -25,7 +25,7 @@ function Update() {
       });
   }, [id]);
 
-  // Data update karne ke liye
+  // Data update karne ke liye..
   const handleUpdate = (e) => {
     e.preventDefault();
 
