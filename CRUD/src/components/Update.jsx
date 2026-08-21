@@ -14,8 +14,9 @@ function Update() {
   // Old data get karne ke liye
   useEffect(() => {
     axios
-      .get(`https://6a8512e39c451dc67a633df5.mockapi.io/Crud/${id}`)
+      .get(`https://6a8512e39c451dc67a633df5.mockapi.io/Crud/`)
       .then((response) => {
+        setID(response.data.e_id);
         setName(response.data.e_name);
         setEmail(response.data.e_email);
         setPassword(response.data.e_password);
@@ -23,7 +24,7 @@ function Update() {
       .catch((error) => {
         console.log(error);
       });
-  }, [id]);
+  }, []);
 
   // Data update karne ke liye..
   const handleUpdate = (e) => {
