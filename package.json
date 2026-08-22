@@ -1,0 +1,21 @@
+{
+  "name": "mern_training",
+  "version": "1.0.0",
+  "description": "",
+  "main": "React.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhaval1328/fullstack_training.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Dhaval1328/fullstack_training/issues"
+  },
+  "homepage": "https://github.com/Dhaval1328/fullstack_training#readme"
+}
