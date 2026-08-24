@@ -1,9 +1,21 @@
-import http from 'http';
+import http from "http";
 
 const PORT = 5000;
 
 const app = http.createServer((req, res) => {
-    res.end("This is my First server1");
+
+    console.log(req.url);
+
+    if (req.url === "/") {
+        res.end("This is my First Server");
+    }
+    else if (req.url === "/about") {
+        res.end("This is About Page");
+    }
+    else {
+        res.end("404 Page Not Found");
+    }
+
 });
 
 app.listen(PORT, () => {
