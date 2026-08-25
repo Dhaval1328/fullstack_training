@@ -31,6 +31,10 @@ fs.unlinkSync("./ABC.txt");
 fs.copyFileSync('./read.txt','abc.txt')
 console.log("File Copied")
 
+//file information
+const statData = fs.statSync('./read.txt');
+console.log(statData);
+
 //Does A FIle exist or not
 
 fs.existsSync("./read.txt")
