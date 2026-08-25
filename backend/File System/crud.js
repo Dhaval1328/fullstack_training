@@ -3,38 +3,53 @@
 
 import fs from 'fs';
 
-//how to create a file:
-fs.writeFileSync('./read.txt',"Hell This Is My read.txt file")
+// //how to create a file:
+// fs.writeFileSync('./read.txt',"Hell This Is My read.txt file")
 
-// reading a file:
-const data = fs.readFileSync('./read.txt');  //read file and generates the buffer data
-const data1 = fs.readFileSync('./read.txt','utf-8'); // read file and generates the actual data 
-console.log(data)
-console.log(data1)
-
-
-//appending a file :
-fs.appendFileSync('./read.txt', "I am learning How TO Uppend Text In fs")
-
-const data2 = fs.readFileSync('./read.txt','utf-8');
-console.log(data2)
+// // reading a file:
+// const data = fs.readFileSync('./read.txt');  //read file and generates the buffer data
+// const data1 = fs.readFileSync('./read.txt','utf-8'); // read file and generates the actual data 
+// console.log(data)
+// console.log(data1)
 
 
-//rename a file:
-fs.renameSync("./read.txt","ABC.txt")
+// //appending a file :
+// fs.appendFileSync('./read.txt', "I am learning How TO Uppend Text In fs")
 
-//delete.file
-fs.unlinkSync("./ABC.txt");
+// const data2 = fs.readFileSync('./read.txt','utf-8');
+// console.log(data2)
 
-//copy a file
 
-fs.copyFileSync('./read.txt','abc.txt')
-console.log("File Copied")
+// //rename a file:
+// fs.renameSync("./read.txt","ABC.txt")
 
-//file information
-const statData = fs.statSync('./read.txt');
-console.log(statData);
+// //delete.file
+// fs.unlinkSync("./ABC.txt");
 
-//Does A FIle exist or not
+// //copy a file
 
-fs.existsSync("./read.txt")
+// fs.copyFileSync('./read.txt','abc.txt')
+// console.log("File Copied")
+
+// //file information
+// const statData = fs.statSync('./read.txt');
+// console.log(statData);
+
+// //Does A FIle exist or not
+
+// fs.existsSync("./read.txt")
+
+
+// ------------------ Directory Operation ------------------
+
+// Create a folder
+fs.mkdirSync("First");
+console.log("Folder Created");
+
+// Read a folder
+const data = fs.readdirSync("F:\\MERN_Training\\backend\\File System");
+
+// Print folder/file names
+for (let i=0; i<data.length; i++) {
+    console.log(data[i]);
+}
