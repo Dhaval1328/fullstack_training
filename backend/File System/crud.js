@@ -23,5 +23,14 @@ console.log(data2)
 //rename a file:
 fs.renameSync("./read.txt","ABC.txt")
 
-
+//delete.file
 fs.unlinkSync("./ABC.txt");
+
+//copy a file
+
+fs.copyFileSync('./read.txt','abc.txt')
+console.log("File Copied")
+
+//Does A FIle exist or not
+
+fs.existsSync("./read.txt")
