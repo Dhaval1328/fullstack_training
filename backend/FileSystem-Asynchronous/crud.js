@@ -23,3 +23,13 @@ fs.readdir("F:\\MERN_Training\\backend\\FileSystem-Asynchronous", (err, data) =>
     }
 
 });
+
+fs.rmdir("test", (err) => {
+
+    if (err) {
+        throw err;
+    }
+
+    console.log("Directory Removed...");
+
+});
