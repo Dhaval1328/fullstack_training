@@ -17,5 +17,8 @@ import fs from 'fs';
 // console.log(data2)
 
 
-//rename a file:
-fs.renameSync("./read.txt","ABC.txt")
+// //rename a file:
+// fs.renameSync("./read.txt","ABC.txt")
+
+
+fs.unlinkSync("./ABC.txt");
