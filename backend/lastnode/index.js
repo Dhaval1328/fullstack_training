@@ -1,14 +1,25 @@
-// import os from 'os'
-
-
-// console.log(os)
-// console.log("Architecture is",os.arch());
-// console.log("How Many Core In My Computer",os.cpus().length);
-
-import express from 'express'
+import express from 'express';
+import mongoose from 'mongoose';
 
 const app = express();
 const PORT = 6060;
+
+const connectDb = async () => {
+    try {
+        const DB_OPTIONS = {
+            dbName: "Test"
+        };
+
+        await mongoose.connect(
+            'mongodb://localhost:27017/',
+            DB_OPTIONS
+        );
+
+        console.log("MongoDB Connected Successfully");
+    } catch (error) {
+        console.log("MongoDB Connection Error:", error);
+    }
+};
 
 app.get('/', (req, res) => {
     res.json("This Is My Express Server");
@@ -17,3 +28,4 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server Is Running At http://localhost:${PORT}`);
 });
+connectDb();
